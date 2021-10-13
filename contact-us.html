@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact-us.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="container">
+        <header class="container">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li class="active">Contact Us</li>
+                    <button id = "login" onclick="openModal();">Login / Register</button>
+                </ul>
+                <i class="fas fa-bars mobile-nav-icon" id="icon" onclick="toggleMobileNav()"></i>
+            </nav>
+        </header>
+        <!-- Mobile navigation goes here -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li> <hr>
+                <li><a href="about-us.html">About Us</a></li> <hr>
+                <li><a href="how-it-works.html">How it works</a></li> <hr>
+                <li>Contact Us</li> <hr>
+                <li onclick="openModal();">Login / Register</li>
+            </ul>
+        </nav>
+        <section class="contact-hero">
+            <h1 class="blue">Connect with cooperative recruit</h1>
+            <p>Need to get in touch with a cooperativerecruit team member? Fill the form below and we will follow up as soon as possible. You can email us at hello@cooprecruits.com or give us a call on +234-816-677-9866</p>
+        </section>
+        <section class="contact-form-wrap">
+            <div class="contact-form">
+                <div class="form-input">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" placeholder="Enter your full name" id="first-name">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email address" id="email">
+                </div>
+                <div class="form-input">
+                    <label for="password">Anything you want us to know?</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+                </div>
+                <input type="submit" value="CONTACT US" id="submit">
+            </div>
+            <div class="contact-address">
+                <img src="img/contact-img.png" alt="contact-address">
+            </div>
+        </section>
+        <section class="other-info">
+            <div class="partnerships">
+                <h2 class="heading">Partnerships</h2>
+                <p>Cooperativerecruit is proud to partner with:</p>
+                <ul>
+                    <li><i class="far fa-check-circle"></i> Nursing schools and associations around Nigeria</li>
+                    <li><i class="far fa-check-circle"></i> Nurses in 4+ African countries</li>
+                    <li><i class="far fa-check-circle"></i> Top UK healthcare employers</li>
+                </ul>
+            </div>
+            <div class="inquiries">
+                <h2 class="heading">Inquiries</h2>
+                <p>For inquiries, please contact us at:</p>
+                <p class="red">hello@cooprecruit.com</p>
+            </div>
+        </section>
+        <footer>
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="footer-wrap">
+                <div class="footer-about wider">
+                    <h4 class="heading ">About Us</h4>
+                    <p><span>Cooperative recruit</span> is a socially responsible recruitment company committed to rewarding value and elevating healthcare for everyone. Create a profile and discover previously hidden opportunities and talents</p>
+                </div>
+                <div class="footer-forum small">
+                    <h4 class="heading ">Forum</h4>
+                    <ul>
+                        <li>Our Blog</li>
+                        <li>Free English Courses</li>
+                        <li>Our Partners</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-candidates small">
+                    <h4 class="heading ">For Candidates</h4>
+                    <ul>
+                        <li>How it works</li>
+                        <li>My Account</li>
+                        <li>Sign Up</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter wider">
+                    <h4 class="heading ">Sign up for our newsletter</h4>
+                    <p>Sign up for our newsletter to get the latest updates and offers delivered directly to your inbox</p>
+                    <div class="suscribe">
+                        <input type="text" placeholder="Enter your Email">
+                        <button class="suscribe-button">Suscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>&copy; 2021 cooperativerecruit. All rights reserved </p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal" id="modal">
+        <div class="sign-wrap" id="sign-up">
+            <div class="page-title">
+                <p>Create a new account</p>
+                <div class="close-modal" onclick="closeSignUpModal();">x</div>
+            </div>
+            <form action="#">
+                <div class="form-input">
+                    <label for="first-name">First Name</label>
+                    <input type="text" placeholder="Enter your first name" id="first-name">
+                </div>
+                <div class="form-input">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" placeholder="Enter your last name" id="last-name">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email address" id="email">
+                </div>
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password">
+                </div>
+                <div class="form-input">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="text" placeholder="Confirm your password" id="first-name">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="agree" id="agree"> 
+                    <p>By clicking on this checkbox, you agree to our terms, conditions and privacy policy</p>
+                </div>
+                <input type="submit" value="SUBMIT" id="submit">
+                <p class="have-account">Already have an account? <span class="blue" onclick="openSignIn();">Log in</span></p>
+            </form>
+        </div>
+        <div class="sign-wrap sign-in sign-in-wrap" id="sign-in">
+            <div class="page-title">
+                <p>Sign in</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <div class="social-accounts">
+                <div>
+                    <div class="social-icon google center"><i class="fab fa-google"></i></div>
+                    <div class="center">continue with Google</div>
+                </div>
+                <div>
+                    <div class="social-icon linkedin center"><i class="fab fa-linkedin"></i></div>
+                    <div class="center">continue with LinkedIn</div>
+                </div>
+            </div>
+            <div class="continue">
+                <hr>
+                <p>or continue with username and password</p>
+                <hr>
+            </div>
+            <form action="#">
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password">
+                </div>
+                <input type="submit" value="SUBMIT" id="submit">
+            </form>
+            <p class="have-account">Forgot Password? <span class="blue" onclick="openFirstModal();">Sign up</span> </p>
+        </div>
+        <div class="sign-wrap sign-in sign-in-wrap" id="first-modal">
+            <div class="page-title">
+                <p>Create a new account</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <form action="">
+                <div class="form-input select">
+                    <label for="gender">Who referred you?</label>
+                    <select name="referee" id="referee">
+                        <option value="">Choose an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="anon">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="form-input select">
+                    <label for="gender">How did you hear about us</label>
+                    <select name="hear-of-us" id="hear-of-us">
+                        <option value="">Choose an option</option>
+                        <option value="friend">Through a friend</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="social media">Social Media</option>
+                        <option value="job boards">Job boards/websites</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+                <div class="other-signin">
+                    <div>
+                        <div class="social-icon google center"><i class="fab fa-google"></i></div>
+                        <div class="center">continue with Google</div>
+                    </div>
+                    <div>
+                        <div class="social-icon linkedin center"><i class="fab fa-linkedin"></i></div>
+                        <div class="center">continue with LinkedIn</div>
+                    </div>
+                </div>
+                <div class="btn" onclick="openSignUp();">Continue with Email</div>
+            </form>
+            <p class="have-account">Already have an account? <span class="blue" onclick="openSignIn();">Sign in</span> </p>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    /* font-size: 14px; */
+}
+.container {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: unset;
+}
+h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: unset;
+}
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height: unset;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: unset;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    display: block;
+    width: 100%;
+}
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer
+}
+section {
+    margin: 50px 0;
+    padding: 30px 5%;
+}
+ul {
+    list-style: none;
+}
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+.scrolling-active {
+    background-color: white;
+}
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-links ul li {
+    margin: 0 15px;
+    padding: 5px;
+    color: #008037;
+}
+.nav-links ul li:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.nav-links ul li.active {
+    border-bottom: 3px solid #008037;
+    pointer-events: none;
+}
+.nav-links ul button {
+    background-color: #008037;
+    color: white;
+    padding: 10px 15px;
+    margin: 0 10px 0 30px;
+}
+.green {
+    background-color: #008037;
+    color: white;
+}
+.red {
+    color: red;
+}
+/* Mobile navigation styles */
+.mobile-nav-icon {
+    display: none;
+    font-size: 16px;
+}
+.mobile-nav {
+    display: none;
+}
+.hero {
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0;
+}
+.hero img {
+    /* margin-top: 80px; */
+    display: block;
+    height: 100vh;
+    max-height: 700px;
+    object-fit: cover;
+    object-position: left;
+}
+.summary-text {
+    text-align: center;
+    font-size: 28px;
+    max-width: 550px;
+    margin: 20px auto 50px;
+    font-weight: 600;
+}
+.stats-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.stats-block-item {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.stats-block-item p {
+    margin: 20px 0;
+}
+.heading {
+    color: #008037;
+}
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0px;
+}
+.features-text {
+    width: 60%;
+}
+.features-text p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.features img {
+    width: 30%;
+    min-height: 300px;
+    max-height: 400px;
+    object-fit: cover;
+}
+.features-text h2 {
+    margin: 10px 0;
+}
+.nurses-love-text {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.nurse-testimonial-block {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.nurse-testimonial-item {
+    width: 25%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.nurse-details {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0 30px;
+}
+.text-box {
+    padding: 10px 30px 0;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 25px;
+}
+.blue {
+    color: #38b6ff;
+}
+.transparent {
+    width: 100px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #008037;
+}
+.transparent:hover {
+    background-color: #008037;
+    color: white;
+}
+.equal-opportunities {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    height: 500px;
+    background-color: #ecfff4;
+}
+.space {
+    height: 100%;
+    width: 45%;
+}
+.equal-opportunities-text {
+    width: 50%;
+    max-width: 550px;
+    /* margin: 0 7% 0 auto; */
+}
+.equal-opportunities img {
+    position: absolute;
+    bottom: 0;
+    left: 7%;
+    height: 600px;
+    width: auto;
+}
+.find-job {
+    width: 80%;
+    max-width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 30px 5%;
+}
+.find-job p {
+    margin: 20px 0;
+}
+footer {
+    font-size: 14px;
+    padding: 20px 0 0;
+    line-height: 25px;
+}
+footer .logo {
+    padding-left: 5%;
+    width: 300px;
+}
+footer li {
+    margin: 10px 0;
+}
+.footer-wrap {
+    background-color: #ecfff4;
+    padding: 50px 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.wider {
+    width: 30%;
+}
+.small {
+    width: 15%;
+}
+.footer-newsletter p {
+    margin: 10px 0;
+}
+.sucscribe {
+    display: flex;
+}
+.suscribe input {
+    width: 70%;
+    height: 35px;
+    padding: 5px 15px;
+    border: 1px solid #a0a0a0;
+    border-radius: 8px 0 0 8px;
+}
+.suscribe button {
+    height: 35px;
+    width: 25%;
+    max-width: 100px;
+    min-width: 70px;
+    background-color: #008037;
+    color: white;
+    margin-left: -5px;
+    border-radius: 0 8px 8px 0;
+} 
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ecfff4;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1150px) {
+    header {
+        background-color: white;
+        padding-right: 10%;
+    }
+    section {
+        margin: 50px 0;
+        padding: 0 5%;
+    }
+    .nav-links ul {
+        display: none;
+    }
+    .mobile-nav-icon {
+        font-size: 16px;
+        display: block;
+        /* color: #008037; */
+        color: #505050;
+    }
+    .mobile-nav {
+        position: fixed;
+        top: 80px;
+        width: 100%;
+        background-color: #008037;
+        color: white;
+        margin-top: -100%;
+        z-index: 1;
+        animation: slide-up 1s forwards ease;
+    }
+    .mobile-nav.show {
+        display: block;
+        animation: slide-down 0.5s forwards ease;
+    }
+    body.lock-screen {
+        height: 100vh;
+        overflow: hidden;
+    }
+    @keyframes slide-down {
+        from {
+            margin-top: -100%;
+        }
+        to {
+            margin-top: 0;
+        }
+    }
+    .mobile-nav ul li {
+        padding: 15px 5%;
+    }
+    .mobile-nav ul hr {
+        border: 1px solid white;
+    }
+    .hero {
+        padding: 0;
+    }
+    .hero img {
+        max-height: 600px;
+    }
+    .nurse-testimonial-item {
+        width: 30%;
+    }
+    .text-box {
+        text-align: left;
+        padding: 10px;
+        line-height: 25px;
+    }
+    .nurse-details {
+        margin: 20px 0;
+    }
+    .equal-opportunities {
+        height: 400px;
+        justify-content: space-between;
+    }
+    .equal-opportunities img {
+        left: 5%;
+        height: 500px;
+    }
+    .equal-opportunities-text {
+        /* margin-right: 20px; */
+        width: 50%;
+        max-width: 600;
+    }
+    .footer-wrap {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .wider {
+        width: 60%;
+    }
+}
+@media (max-width: 760px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    section {
+        margin: 20px 0;
+        padding: 0 5%;
+    }
+    header {
+        height: 70px;
+        padding-right: 8%;
+    }
+    .logo img {
+        width: 200px;
+    }
+    .mobile-nav {
+        top: 70px;
+    }
+    .mobile-nav ul li a {
+        padding-right: 50%;
+    }
+    .hero {
+        margin-top: 70px;
+    }
+    .hero img {
+        width: 100%;
+        height: 40vh;
+        max-height: 500px;
+    }
+    .summary-text {
+        max-width: 360px;
+        margin: 40px auto 20px;
+    }
+    .summary-text p{
+        font-size: 20px;
+        
+    }
+    .stats-block {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .stats-block-item {
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+    .stats-block-item p{
+        margin: 0 auto;
+    }
+    .features {
+        flex-direction: column;
+    }
+    .features-text {
+        width: 100%;
+        text-align: center;
+    }
+    .features-text p {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .features img {
+        width: 90vw;
+        height: 68vw;
+        margin: 20px 0;
+    }
+    .sm-reverse {
+        flex-direction: column-reverse;
+    }
+    .nurses-love {
+        margin-top: 40px;
+    }
+    .nurse-testimonial-block {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nurse-testimonial-item {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    .space {
+        display: none;
+    }
+    .equal-opportunities {
+        margin-top: 20px;
+        height: 300px;
+    }
+    .equal-opportunities-text {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .equal-opportunities img {
+        display: none;
+        height: 300px;
+    }
+    .find-job {
+        margin: 20px auto;
+        width: 100%;
+    }    
+    .footer-wrap {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+    .wider {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .small {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .suscribe input {
+        min-width: 150px;
+    }
+}

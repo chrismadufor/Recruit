@@ -1,0 +1,182 @@
+.about-hero {
+    height: 100vh;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(117, 117, 117, 0.445), rgba(78, 78, 78, 0.15), rgba(44, 44, 44, 0.15)), url(../img/about-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about-hero h1 {
+    width: 80%;
+    max-width: 800px;
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.about-hero p {
+    width: 65%;
+    color: white;
+    font-size: 22px;
+}
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about h3 {
+    position: relative;
+}
+.about h3:after {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: #008037;
+    top: -15px;
+    left: 0;
+}
+.about-text, .about-img {
+    width: 45%;
+}
+.mission {
+    background-color: #EDF5FB;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 70px 5%;
+}
+.mission-item {
+    width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.mission-item > img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+.mission ul {
+    list-style-position: inside;
+    list-style-type: disc; 
+}
+.team h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+.team h3:after {
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: #008037;
+    top: -15px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.team-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.team-member-text {
+    width: 48%;
+    position: relative;
+}
+.team-member-img {
+    display: block;
+    width: 50%;
+    position: relative;
+}
+.triangle {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translate(50%, -50%);
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-right: 50px solid rgb(255, 255, 255);
+    border-bottom: 30px solid transparent;
+    z-index: 2;
+}
+.triangle-left {
+    left: -25px;
+    border-left: 50px solid rgb(255, 255, 255);
+    border-right: 0;
+}
+.social {
+    font-size: 20px;
+    margin: 20px 0 0;
+}
+.social i {
+    margin-right: 20px;
+}
+@media (max-width: 1150px) {
+    .about-hero {
+        max-height: 600px;
+    }
+    .about-hero h1 {
+        font-size: 40px;
+        max-width: 600px;
+    }
+    .team-member {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 760px) {
+    .about-hero {
+        height: 45vh;
+        max-height: 500px;
+    }
+    .about-hero h1 {
+        font-size: 24px;
+    }
+    .about-hero p {
+        font-size: 16px;
+    }
+    .about {
+        flex-direction: column-reverse;
+    }
+    .about-text, .about-img {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .mission {
+        flex-direction: column;
+    }
+    .mission-item {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 20px;
+    }
+    .team {
+        padding-top: 20px;
+    }
+    .team-member {
+        flex-direction: column;
+    }
+    .team-member.reverse {
+        flex-direction: column-reverse;
+    }
+    .team-member > div {
+        width: 100%;
+    }
+    .team-member-img {
+        margin-bottom: 20px;
+    }
+    .triangle {
+        display: none;
+    }
+    .social {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <header class="container">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            <nav class="nav-links">
+                <ul>
+                    <li class="active">Home</li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <div class="dashboard-nav-icons">
+                        <i class="fas fa-bell heading"></i>
+                        <button id = "login" onclick="openModal();">My account</button>
+                    </div>
+                </ul>
+                <i class="fas fa-bars mobile-nav-icon" id="icon" onclick="toggleMobileNav()"></i>
+            </nav>
+        </header>
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li>Home</li> <hr>
+                <li><a href="about-us.html">About Us</a></li> <hr>
+                <li><a href="how-it-works.html">How it works</a></li> <hr>
+                <li><a href="contact-us.html">Contact Us</a></li> <hr>
+                <!-- <li onclick="openModal();">Login / Register</li> -->
+            </ul>
+           
+        </nav>
+        <div class="main-content">
+            <div class="side-nav shadow">
+                <div class="profile-details">
+                    <div class="profile-picture">
+                        <img src="img/dash-img.png" alt="">
+                    </div>
+                    <button class="transparent"><i class="fas fa-pencil"></i> Edit profile photo</button>
+                    <p class="name"><b>John Doe</b></p>
+                    <div class="circle-progress-bar">
+                        <div class="inner-circle progress-status"></div>
+                        <div class="inner-circle">10%</div>
+                    </div>
+                    <button class="green">Complete your profile</button> 
+                </div>
+                <hr>
+                <ul class="side-nav-links">
+                    <li><a href="dashboard.html"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li class="active"><i class="fas fa-user-circle"></i>My profile</li>
+                    <li><a href="coop-test.html"><i class="fas fa-chart-line"></i>Take the coop test</a></li>
+                    <li><a href="resources.html"><i class="fas fa-book"></i>Resources</a></li>
+                    <li><a href="index.html"><i class="fas fa-sign-out"></i>Log-out</a></li>
+                </ul>
+            </div>
+            <form action="" class="dashboard-form">
+                <div class="shadow bottom">
+                    <p class="section-header">Basic</p>
+                    <div class="form-wrap">
+                        <div class="form-input">
+                            <label for="first-name">First Name</label>
+                            <input type="text" value="John" id="first-name">
+                        </div>
+                        <div class="form-input">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" value="Doe" id="last-name">
+                        </div>
+                        <div class="form-input">
+                            <label for="email">Email</label>
+                            <input type="email" value="Johndoe11@gmail.com" id="email">
+                        </div>
+                        <div class="form-input">
+                            <label for="username">Username</label>
+                            <input type="text" value="Johndoe11" id="username">
+                        </div>
+                        <div class="form-input">
+                            <label for="phone">Phone</label>
+                            <input type="tel" value="08146787798" id="phone">
+                        </div>
+                        <div class="form-input select">
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="anon">Prefer not to say</option>
+                            </select>
+                        </div> 
+                    </div>
+                </div>
+                <div class="shadow bottom">
+                    <p class="section-header">Basic</p>
+                    <div class="form-wrap">
+                        <div class="form-input">
+                            <label for="experience">Years of Experience</label>
+                            <input type="text" value="3" id="experience">
+                        </div>
+                        <div class="form-input">
+                            <label for="qualification">Qualification(s)</label>
+                            <input type="text" value="" id="qualification">
+                        </div>
+                        <div class="form-input">
+                            <label for="ielts">IELTS</label>
+                            <input type="file" value="" id="ielts" class="input-file">
+                        </div>
+                        <div class="form-input">
+                            <label for="passport">Valid Passport</label>
+                            <input type="file" value="" id="passport" class="input-file">
+                        </div>
+                        <div class="form-input">
+                            <label for="cbt">CBT Score</label>
+                            <input type="text" value="80" id="cbt">
+                        </div>
+                        <div class="form-input">
+                            <label for="decision-letter">Qualification(s)</label>
+                            <input type="file" value="" id="decision-letter" class="input-file">
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow">
+                    <p class="section-header">Basic</p>
+                    <div class="form-wrap">
+                        <div class="form-input select">
+                            <label for="country">Country</label>
+                            <select name="country" id="country">
+                            </select>
+                        </div> 
+                        <div class="form-input select">
+                            <label for="city">City</label>
+                            <select name="city" id="city">
+                            </select>
+                        </div> 
+                        <div class="form-input text-box">
+                            <label for="address">Address</label>
+                            <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="footer-wrap">
+                <div class="footer-about wider">
+                    <h4 class="heading ">About Us</h4>
+                    <p><span>Cooperative recruit</span> is a socially responsible recruitment company committed to rewarding value and elevating healthcare for everyone. Create a profile and discover previously hidden opportunities and talents</p>
+                </div>
+                <div class="footer-forum small">
+                    <h4 class="heading ">Forum</h4>
+                    <ul>
+                        <li>Our Blog</li>
+                        <li>Free English Courses</li>
+                        <li>Our Partners</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-candidates small">
+                    <h4 class="heading ">For Candidates</h4>
+                    <ul>
+                        <li>How it works</li>
+                        <li>My Account</li>
+                        <li>Sign Up</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter wider">
+                    <h4 class="heading ">Sign up for our newsletter</h4>
+                    <p>Sign up for our newsletter to get the latest updates and offers delivered directly to your inbox</p>
+                    <div class="suscribe">
+                        <input type="text" value="Enter your Email">
+                        <button id="suscribe-button">Suscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>&copy; 2021 cooperativerecruit. All rights reserved </p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal sign-in-wrap" id="modal">
+        <div class="dashboard-wrap sign-in">
+            <div class="page-title">
+                <p>Profile Completion</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <div class="dashboard-modal">
+                <div class="flex">
+                    <p><b>10%</b></p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar"></div>
+                    </div>  
+                </div>
+                
+                <div class="profile-sections">
+                    <p>Complete your profile by uploading the following missing requirements from your profile page</p>
+                    <div class="profile-sections-item">
+                        <div class="profile-sections-item-text">
+                            <p>10%</p>
+                            <p>Work Experience</p>
+                        </div>
+                        <img src="img/check-circle.svg" alt="">
+                    </div>
+                    <div class="profile-sections-item">
+                        <div class="profile-sections-item-text">
+                            <p>10%</p>
+                            <p>Valid Passport</p>
+                        </div>
+                       <img src="img/failed-file.svg" alt="">
+                    </div>
+                    <div class="profile-sections-item">
+                        <div class="profile-sections-item-text">
+                            <p>10%</p>
+                            <p>CBT</p>
+                        </div>
+                       <img src="img/failed-file.svg" alt="">
+                    </div>
+                    <div class="profile-sections-item">
+                        <div class="profile-sections-item-text">
+                            <p>10%</p>
+                            <p>IELTS</p>
+                        </div>
+                       <img src="img/failed-file.svg" alt="">
+                    </div>
+                    <div class="profile-sections-item">
+                        <div class="profile-sections-item-text">
+                            <p>10%</p>
+                            <p>Decision letter</p>
+                        </div>
+                       <img src="img/failed-file.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

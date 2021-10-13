@@ -1,0 +1,121 @@
+.contact-hero {
+    margin: 80px 0 0;
+    height: 30vh;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contact-hero h1 {
+    font-size: 40px;
+}
+.contact-hero p {
+    width: 100%;
+    max-width: 750px;
+}
+.contact-form-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.contact-form {
+    width: 47%;
+    padding: 20px 20px 0;
+}
+.contact-address {
+    max-height: 100%;
+    width: 45%;
+}
+.contact-address img {
+    height: 100%;
+    max-width: 500px;
+}
+.contact-form .form-input {
+    width: 100%;
+}
+.other-info {
+    display: flex;
+    justify-content: space-around;
+}
+.other-info > div {
+    border: 1px solid rgb(226, 226, 226);
+    box-shadow: 5px 5px 10px rgb(226, 226, 226);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    line-height: 35px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.other-info .partnerships > * {
+    width: 60%;
+    margin: 0 auto;
+}
+.other-info .inquiries > * {
+    width: 80%;
+    margin: 0 auto;
+}
+.other-info .heading {
+    margin-bottom: 20px;
+}
+.other-info i {
+    color: #008037;
+    margin-right: 10px;
+}
+.red {
+    color: red;
+}
+.partnerships {
+    width: 60%;
+}
+.inquiries {
+    width: 30%;
+}
+@media (max-width: 1150px) {
+    .partnerships {
+        width: 45%;
+    }
+    .other-info .partnerships > * {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .inquiries {
+        width: 45%;
+    }
+    .other-info .inquiries > * {
+        width: 100%;
+    }
+    .contact-form {
+        width: 50%;
+    }
+    .contact-form .form-input textarea {
+        height: 100px;
+    }
+}
+@media (max-width: 760px) {
+    .contact-hero {
+        margin: 80px 0 20px;
+        height: unset;
+    }
+    .contact-hero h1 {
+        font-size: 28px;
+    }
+    .contact-form-wrap {
+        flex-direction: column;
+    }
+    .contact-form-wrap > * {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .other-info {
+        flex-direction: column;
+    }
+    .other-info > * {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

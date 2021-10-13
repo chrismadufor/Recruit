@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+.modal {
+    width: 100vw;
+    overflow: hidden;
+    min-height: 100vh;
+    padding: 50px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+#modal.show {
+    display: block;
+}
+#sign-up, #first-modal, #sign-in {
+    display: none;
+}
+button {
+    border: none;
+}
+.sign-wrap {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    /* border: 1px solid rgba(177, 177, 177, 0.3); */
+    border-radius: 10px;
+}
+.page-title {
+    background-color: #38b6ff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 10px 10px 0 0;
+}
+form, .form-wrap {
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #505050;
+}
+.form-input {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    position: relative;
+}
+.close-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 11px;
+    cursor: pointer;
+    color: #38b6ff;
+    background-color: white;
+}
+label {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+label:after {
+    content: '*';
+    color: red;
+    margin-left: 2px;
+}
+.form-input input, .form-input select, .form-input textarea {
+    height: 45px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(226, 226, 226);
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.form-input textarea {
+    height: 200px;
+}
+.form-input input:focus, .form-input select:focus, .form-input textarea:focus{
+    outline: none;
+}
+.resume-container{
+    border: 1px solid rgb(226, 226, 226);
+    box-shadow: 2px 2px 5px rgb(226, 226, 226);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 14px;
+    /* background-color: red; */
+}
+.upload-text {
+    font-size: 12px;
+    font-weight: 500px;
+}
+.light-text {
+    font-size: 10px;
+    font-weight: 300px;
+    margin: 5px 0;
+}
+.upload {
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(220, 240, 236);
+    color: #505050;
+}
+.upload i {
+    margin-right: 10px;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.checkbox p {
+    margin-left: 5px;
+}
+#submit, .btn {
+    width: 100%;
+    background-color: #008037;
+    color: white;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.green {
+    color: #008037;
+    font-weight: 600;
+}
+.have-account {
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.sign-in {
+    padding-bottom: 20px;
+}
+.sign-in form {
+    margin: 10px 0;
+}
+.social-accounts{
+    padding: 20px 30px 0;
+}
+.social-accounts > div, .other-signin > div {
+    display: flex;
+    height: 45px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon {
+    width: 50px;
+    border-right: 1px solid rgb(226, 226, 226);
+    margin-right: 20px;
+}
+.social-icon i{
+    font-size: 20px;
+}
+.google {
+    color: rgb(207, 0, 0);
+}
+.linkedin {
+    color: blue;
+}
+.continue {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    text-align: center;
+}
+.continue hr {
+    width: 20%;
+    max-width: 150px;
+    height: 1px;
+}
+.other-signin {
+    width: 100%;
+}
+.other-signin > div {
+    width: 100%;
+}
+select {
+    appearance: none;    
+}
+.form-input.select:after {
+    content: "";
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid rgb(161, 161, 161);
+  pointer-events: none;
+}
+@media (max-width: 760px) {
+    .sign-wrap { 
+        width: 95%;
+        margin: 0 auto;
+    }
+    form {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    .form-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .social-accounts, .continue {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .continue {
+        font-size: 10px;
+    }
+    .continue hr {
+        width: 20%;
+        min-width: 50px;
+    }
+}

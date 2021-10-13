@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <title>Sign in and Sign up pages</title>
+</head>
+<body>
+    <header class="container">
+        <div class="logo"><img src="img/logo.png" alt="logo"></div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="how-it-works.html">How it works</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <button id = "login" onclick="openModal();">Login / Register</button>
+            </ul>
+            <i class="fas fa-bars mobile-nav-icon" id="icon" onclick="toggleMobileNav()"></i>
+        </nav>
+    </header>
+    <div class="modal" id="modal">
+        <div class="sign-wrap" id="sign-up">
+            <div class="page-title">
+                <p>Create a new account</p>
+                <div class="close-modal" onclick="closeSignUpModal();">x</div>
+            </div>
+            <form action="#">
+                <div class="form-input">
+                    <label for="first-name">First Name</label>
+                    <input type="text" placeholder="Enter your first name" id="first-name">
+                </div>
+                <div class="form-input">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" placeholder="Enter your last name" id="last-name">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email address" id="email">
+                </div>
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="phone">Phone</label>
+                    <input type="tel" placeholder="Enter your phone number" id="phone">
+                </div>
+                <div class="form-input select">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="">Choose a gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="anon">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="form-input">
+                    <label for="qualification">Qualification(s)</label>
+                    <input type="text" placeholder="Enter your qualifications" id="qualification">
+                </div>
+                <div class="form-input">
+                    <label for="experience">Years of Experience</label>
+                    <input type="text" placeholder="Enter your years of experience" id="experience">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password">
+                </div>
+                <div class="form-input">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="text" placeholder="Confirm your password" id="first-name">
+                </div>
+                <!-- <div class="form-input resume-container">
+                    <i class="fas fa-envelope"></i>
+                    <div class="resume-text">
+                        <p><b>Resume / CV</b></p>
+                        <p class="upload-text">Upload or drag and drop</p>
+                        <p class="light-text">PDF(Preferred), DOCX, DOC, RTF, TXT up to 1MB</p>
+                    </div>
+                    <button class="upload">
+                        <i class="fas fa-envelope"></i>
+                        <p>Upload</p>
+                    </button>
+                </div> -->
+                <div class="checkbox">
+                    <input type="checkbox" name="agree" id="agree"> 
+                    <p>By clicking on this checkbox, you agree to our terms, conditions and privacy policy</p>
+                </div>
+                <input type="submit" value="SUBMIT" id="submit">
+                <p class="have-account">Already have an account? <span class="blue" onclick="openSignIn();">Log in</span></p>
+            </form>
+        </div>
+        <div class="sign-wrap sign-in sign-in-wrap" id="sign-in">
+            <div class="page-title">
+                <p>Sign in</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <div class="social-accounts">
+                <div>
+                    <div class="social-icon google center"><i class="fab fa-google"></i></div>
+                    <div class="center">continue with Google</div>
+                </div>
+                <div>
+                    <div class="social-icon linkedin center"><i class="fab fa-linkedin"></i></div>
+                    <div class="center">continue with LinkedIn</div>
+                </div>
+            </div>
+            <div class="continue">
+                <hr>
+                <p>or continue with username and password</p>
+                <hr>
+            </div>
+            <form action="#">
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password">
+                </div>
+                <input type="submit" value="SUBMIT" id="submit">
+            </form>
+            <p class="have-account">Forgot Password? <span class="blue" onclick="openFirstModal();">Sign up</span> </p>
+        </div>
+        <div class="sign-wrap sign-in sign-in-wrap" id="first-modal">
+            <div class="page-title">
+                <p>Create a new account</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <form action="">
+                <div class="form-input select">
+                    <label for="gender">Who referred you?</label>
+                    <select name="referee" id="referee">
+                        <option value="">Choose an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="anon">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="form-input select">
+                    <label for="gender">How did you hear about us</label>
+                    <select name="hear-of-us" id="hear-of-us">
+                        <option value="">Choose an option</option>
+                        <option value="friend">Through a friend</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="social media">Social Media</option>
+                        <option value="job boards">Job boards/websites</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+                <div class="other-signin">
+                    <div>
+                        <div class="social-icon google center"><i class="fab fa-google"></i></div>
+                        <div class="center">continue with Google</div>
+                    </div>
+                    <div>
+                        <div class="social-icon linkedin center"><i class="fab fa-linkedin"></i></div>
+                        <div class="center">continue with LinkedIn</div>
+                    </div>
+                </div>
+                <div class="btn" onclick="openSignUp();">Continue with Email</div>
+            </form>
+            <p class="have-account">Already have an account? <span class="blue" onclick="openSignIn();">Sign in</span> </p>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

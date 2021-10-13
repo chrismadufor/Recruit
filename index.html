@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header goes here -->
+        <header class="container">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            <nav class="nav-links">
+                <ul>
+                    <li class="active">Home</li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="how-it-works.html">How it works</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <button id = "login" onclick="openModal();">Login / Register</button>
+                </ul>
+                <i class="fas fa-bars mobile-nav-icon" id="icon" onclick="toggleMobileNav()"></i>
+            </nav>
+        </header>
+        <!-- Mobile navigation goes here -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li>Home</li> <hr>
+                <li><a href="about-us.html">About Us</a></li> <hr>
+                <li><a href="how-it-works.html">How it works</a></li> <hr>
+                <li><a href="contact-us.html">Contact Us</a></li> <hr>
+                <li onclick="openModal();">Login / Register</li>
+            </ul>
+           
+        </nav>
+        <section class="hero">
+            <img src="img/hero.png" alt="">
+        </section>
+        <section class="stats">
+            <div class="summary-text">
+                <p>We are growing, building partnerships, and changing lives</p>
+            </div>
+            <div class="stats-block">
+                <div class="stats-block-item">
+                    <h1 class="heading">3</h1>
+                    <p>offices in Lagos, London, Kigali, & expanding</p>
+                </div>
+                <div class="stats-block-item">
+                    <h1 class="heading">1000+</h1>
+                    <p>nurses believe in our mission</p>
+                </div>
+                <div class="stats-block-item">
+                    <h1 class="heading">20000+</h1>
+                    <p>hours in combined team experience connecting African nuses with opportunities home and abroad</p>
+                </div>
+            </div>
+        </section>
+        <section class="features sm-reverse">
+            <div class="features-text">
+                <h2 class="heading">Get matched to top employers based on your skills</h2>
+                <p>On Cooperativerecruit, employers are hiring nurses just like you. Complete your profile, get vetted and apply for your next role.</p>
+                <button class="transparent">Apply</button>
+            </div>
+            <img src="img/nurse-globe.png" alt="">
+        </section>
+        <section class="features">
+            <img src="img/lessons.png" alt="">
+            <div class="features-text">
+                <h2 class="heading">Get free English lessons</h2>
+                <p>On Cooperativerecruit, employers are hiring nurses just like you. Complete your profile, get vetted and apply for your next role.</p>
+                <button class="transparent">Apply</button>
+            </div>
+        </section>
+        <section class="features sm-reverse">
+            <div class="features-text">
+                <h2 class="heading">Dedicated Customer Service</h2>
+                <p>On Cooperativerecruit, employers are hiring nurses just like you. Complete your profile, get vetted and apply for your next role.</p>
+                <button class="transparent">Apply</button>
+            </div>
+            <img src="img/customer-service.png" alt="">
+        </section>
+        <section class="nurses-love">
+            <div class="nurses-love-text">
+                <h3>See why nurses love <span class="blue">Cooperative</span>recruit</h3>
+                <p>Our easy-to-use solutions connect highly skilled African nurses with free and impactful opportunities around the world.</p>
+            </div>
+            <div class="nurse-testimonial-block">
+                <div class="nurse-testimonial-item">
+                    <img src="img/test1.png" alt="">
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dicta, esse debitis et ipsa assumenda hic facere fugiat voluptate sint?</p>
+                    <div class="nurse-details">
+                        <p class="nurse-name">Dora Doe</p>
+                        <p class="nurse-location">Birmingham, UK</p>
+                    </div>
+                    </div>
+                    
+                </div>
+                <div class="nurse-testimonial-item">
+                    <img src="img/test2.png" alt="">
+                    <div class="text-box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dicta, esse debitis et ipsa assumenda hic facere fugiat voluptate sint?</p>
+                    <div class="nurse-details">
+                        <p class="nurse-name">Rejoice Eze</p>
+                        <p class="nurse-location">Greater Manchester, UK</p>
+                    </div>
+                    </div>
+                    
+                </div>
+                <div class="nurse-testimonial-item">
+                    <img src="img/test3.png" alt="">
+                    <div class="text-box">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim dicta, esse debitis et ipsa assumenda hic facere fugiat voluptate sint?</p>
+                    <div class="nurse-details">
+                        <p class="nurse-name">John Edem</p>
+                        <p class="nurse-location">London, UK</p>
+                    </div>  
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="equal-opportunities">
+            <img src="img/bigman.png" alt="">
+            <!-- This empty div is to create the space that the image will be on -->
+            <div class="space"></div>
+            <div class="equal-opportunities-text">
+                <h2 class="heading">Free and equal opportunites for everyone</h2>
+                <p>On Cooperativerecruit, companies are hiring Nurses just like you. Complete your profile, get vetted and start applying for your next role.</p>
+            </div>
+        </section>
+        <section class="find-job">
+            <h2 class="heading">Find a new job today</h2>
+            <p>Take advantage of our easy-to-use solutions and connect with free and impactful opportunities around the world.</p>
+            <button class="transparent">View jobs</button>
+        </section>
+        <footer>
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="footer-wrap">
+                <div class="footer-about wider">
+                    <h4 class="heading ">About Us</h4>
+                    <p><span>Cooperative recruit</span> is a socially responsible recruitment company committed to rewarding value and elevating healthcare for everyone. Create a profile and discover previously hidden opportunities and talents</p>
+                </div>
+                <div class="footer-forum small">
+                    <h4 class="heading ">Forum</h4>
+                    <ul>
+                        <li>Our Blog</li>
+                        <li>Free English Courses</li>
+                        <li>Our Partners</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-candidates small">
+                    <h4 class="heading ">For Candidates</h4>
+                    <ul>
+                        <li>How it works</li>
+                        <li>My Account</li>
+                        <li>Sign Up</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter wider">
+                    <h4 class="heading ">Sign up for our newsletter</h4>
+                    <p>Sign up for our newsletter to get the latest updates and offers delivered directly to your inbox</p>
+                    <div class="suscribe">
+                        <input type="text" placeholder="Enter your Email">
+                        <button id="suscribe-button">Suscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>&copy; 2021 cooperativerecruit. All rights reserved </p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal" id="modal">
+        <div class="sign-wrap" id="sign-up">
+            <div class="page-title">
+                <p>Create a new account</p>
+                <div class="close-modal" onclick="closeSignUpModal();">x</div>
+            </div>
+            <form action="#">
+                <div class="form-input">
+                    <label for="first-name">First Name</label>
+                    <input type="text" placeholder="Enter your first name" id="first-name">
+                </div>
+                <div class="form-input">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" placeholder="Enter your last name" id="last-name">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter your email address" id="email">
+                </div>
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username">
+                </div>
+                <!-- <div class="form-input">
+                    <label for="phone">Phone</label>
+                    <input type="tel" placeholder="Enter your phone number" id="phone">
+                </div> -->
+                <!-- <div class="form-input">
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="">Choose a gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="anon">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="form-input">
+                    <label for="qualification">Qualification(s)</label>
+                    <input type="text" placeholder="Enter your qualifications" id="qualification">
+                </div>
+                <div class="form-input">
+                    <label for="experience">Years of Experience</label>
+                    <input type="text" placeholder="Enter your years of experience" id="experience">
+                </div> -->
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password">
+                </div>
+                <div class="form-input">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="text" placeholder="Confirm your password" id="first-name">
+                </div>
+                <!-- <div class="form-input resume-container">
+                    <i class="fas fa-envelope"></i>
+                    <div class="resume-text">
+                        <p><b>Resume / CV</b></p>
+                        <p class="upload-text">Upload or drag and drop</p>
+                        <p class="light-text">PDF(Preferred), DOCX, DOC, RTF, TXT up to 1MB</p>
+                    </div>
+                    <button class="upload">
+                        <i class="fas fa-envelope"></i>
+                        <p>Upload</p>
+                    </button>
+                </div> -->
+                <div class="checkbox">
+                    <input type="checkbox" name="agree" id="agree"> 
+                    <p>By clicking on this checkbox, you agree to our terms, conditions and privacy policy</p>
+                </div>
+                <input type="submit" value="SUBMIT" id="submit">
+                <p class="have-account">Already have an account? <span class="blue" onclick="openSignIn();">Log in</span></p>
+            </form>
+        </div>
+        <div class="sign-wrap sign-in sign-in-wrap" id="sign-in">
+            <div class="page-title">
+                <p>Sign in</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <div class="social-accounts">
+                <div>
+                    <div class="social-icon google center"><i class="fab fa-google"></i></div>
+                    <div class="center">continue with Google</div>
+                </div>
+                <div>
+                    <div class="social-icon linkedin center"><i class="fab fa-linkedin"></i></div>
+                    <div class="center">continue with LinkedIn</div>
+                </div>
+            </div>
+            <div class="continue">
+                <hr>
+                <p>or continue with username and password</p>
+                <hr>
+            </div>
+            <form action="#">
+                <div class="form-input">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Enter your username" id="username">
+                </div>
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter your password" id="password">
+                </div>
+                <input type="submit" value="SUBMIT" id="submit">
+            </form>
+            <p class="have-account">Forgot Password? <span class="blue" onclick="openFirstModal();">Sign up</span> </p>
+        </div>
+        <div class="sign-wrap sign-in sign-in-wrap" id="first-modal">
+            <div class="page-title">
+                <p>Create a new account</p>
+                <p class="close-modal" onclick="closeSignInModal();">x</p>
+            </div>
+            <form action="">
+                <div class="form-input select">
+                    <label for="gender">Who referred you?</label>
+                    <select name="referee" id="referee">
+                        <option value="">Choose an option</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="anon">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="form-input select">
+                    <label for="gender">How did you hear about us</label>
+                    <select name="hear-of-us" id="hear-of-us">
+                        <option value="">Choose an option</option>
+                        <option value="friend">Through a friend</option>
+                        <option value="linkedin">LinkedIn</option>
+                        <option value="social media">Social Media</option>
+                        <option value="job boards">Job boards/websites</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+                <div class="other-signin">
+                    <div>
+                        <div class="social-icon google center"><i class="fab fa-google"></i></div>
+                        <div class="center">continue with Google</div>
+                    </div>
+                    <div>
+                        <div class="social-icon linkedin center"><i class="fab fa-linkedin"></i></div>
+                        <div class="center">continue with LinkedIn</div>
+                    </div>
+                </div>
+                <div class="btn" onclick="openSignUp();">Continue with Email</div>
+            </form>
+            <p class="have-account">Already have an account? <span class="blue" onclick="openSignIn();">Sign in</span> </p>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

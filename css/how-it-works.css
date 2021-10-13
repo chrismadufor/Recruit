@@ -1,0 +1,119 @@
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding: 20px 6% 20px 5%;
+    background-color: #38b6ff;
+    color: white;
+}
+.page-header img {
+    display: block;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+.page-header > div > p {
+    font-size: 20px;
+} 
+.steps-container {
+    margin: 80px 0 0;
+    padding: 0 5% ;
+    position: relative;
+}
+.steps-container:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.steps-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+    min-height: 200px;
+    /* border: 1px solid black; */
+}
+.steps-item-text {
+    width: 45%;
+    max-width: 500px;
+}
+.steps-item img {
+    width: 45%;
+    max-width: 350px;
+}
+.steps-item .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #008037;
+    color: white;
+    font-size: 14px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 0;
+}
+.line {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #008037;
+    z-index: -1;
+}
+.youtube iframe {
+   display: block;
+    width: 90vw;
+    max-width: 800px;
+    height: 53vw;
+    max-height: 470px;
+    margin: 50px auto;
+}
+@media (max-width: 1150px) {
+    .steps-container {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 760px) {
+    .page-header {
+        padding: 80px 5% 10px;
+    }
+    .page-header h1 {
+        font-size: 24px;
+    }
+    .page-header p {
+        font-size: 16px;
+    }
+    .page-header img {
+        width: 70px;
+    }
+    .steps-item .number {
+        top: 30px;
+        left: 0;
+    }
+    .line {
+        display: none;
+    }
+    .steps-item {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .steps-item.reverse {
+        flex-direction: column-reverse;
+    }
+    .steps-item-text {
+        width: 100%;
+    }
+    .steps-item img {
+        width: 80%;
+        max-width: 400px;
+        margin: 20px 0;
+    }
+}
